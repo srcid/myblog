@@ -1,0 +1,15 @@
+urls:
+  twitter: https://www.twitter.com/
+  github: https://github.com/
+  linkedin: https://www.linkedin.com/in/
+  youtube: https://youtube.com/
+
+accounts:
+  - platform: twitter
+    id: alcides_dev_br
+  - platform: github
+    id: srcid
+  - platform: linkedin
+    id: srcid
+  - platform: youtube
+    id: "@alcides.ribeiro"

@@ -1,0 +1,9 @@
+<div class="mx-auto mt-2 px-4 mb-8 max-w-screen-sm">
+    <ul class="flex flex-col gap-3">
+    {% for post in site.posts %}
+        <li>
+            {% include post_card.html post=post %}
+        </li>
+    {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,30 @@
+<nav class="navbar bg-base-300 px-4">
+    
+    <div class="flex-1">
+        <a href="/" class="btn btn-ghost text-xl">Alcides Ribeiro</a>
+    </div>
+
+    <div class="flex-none">
+        <ul class="hidden sm:flex menu menu-horizontal px-1">
+            {% assign routes_sorted = site.routes | sort: "title" %}
+            {% for route in routes_sorted %}
+                {% if route.title != "Inicio"%}
+                    <li><a href="{{route.url}}">{{ route.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost sm:hidden">
+                {% include icons/three_bars_right.html %}                  
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            {% for route in routes_sorted %}
+                {% if route.title != "Inicio"%}
+                    <li><a href="{{route.url}}">{{ route.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+        {% include theme_switch.html %}
+    </div>
+</nav>

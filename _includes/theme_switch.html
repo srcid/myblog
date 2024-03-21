@@ -1,0 +1,36 @@
+<label class="cursor-pointer grid place-items-center">
+    <input id="theme_switch_checkbox" type="checkbox" value="synthwave"
+        class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
+    {% include icons/sun.html %}
+    {% include icons/moon.html %}
+</label>
+
+<script>
+    function get_system_theme() {
+        if (window.matchMedia) {
+            const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            if (darkModeQuery.matches) {
+                return "dark";
+            }
+            
+            return "light"
+        }
+    }
+
+    function listen_theme_switch({target}) {
+        const {checked} = target
+        const theme_mode = checked ? "dark" : "light";   
+        
+        document.documentElement.setAttribute("data-theme", theme_mode)
+        localStorage.setItem("theme_mode", theme_mode)
+    }
+
+    const initial_theme_mode = localStorage.getItem("theme_mode") || get_system_theme()
+    
+    document.documentElement.setAttribute("data-theme", initial_theme_mode)
+
+    const inputref = document.getElementById("theme_switch_checkbox")
+    inputref.addEventListener("click", listen_theme_switch)
+    inputref.checked = initial_theme_mode == "dark"
+</script>

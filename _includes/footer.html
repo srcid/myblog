@@ -1,0 +1,25 @@
+<footer class="footer p-10 bg-neutral text-neutral-content">
+  <aside>
+    <h6 class="footer-title">{{ site.title }}</h6>
+    <div class="flex flex-row gap-8 items-center">
+      <div class="relative size-28">
+        <img class="rounded-full absolute" src="https://avatars.githubusercontent.com/u/34487193?v=4" alt="Foto do desenvolvedor desse blog.">
+        <img class="opacity-0 hover:opacity-100 transition-opacity hover:scale-105 trnasition absolute z-10" src="{{ "assets/images/logo/logo.svg" | relative_path }}" alt="Circulo preto escrito CID em branco com o pingo do I em amarelo.">
+      </div>
+      <p class="max-w-72">
+        {{ site.description }}
+      </p>
+    </div>
+  </aside>
+
+  <nav class="justify-self-end">
+    <h6 class="footer-title">Social</h6>
+    <div class="grid grid-flow-col gap-4">
+      {% for account in site.data.social.accounts %}
+      <a class="link link-hover [&>svg]:size-6 [&>svg]:fill-current" href="{{ site.data.social.urls[account.platform] | append: account.id }}" target="_blank" rel="noopener noreferrer">
+        {% include icons/social/{{account.platform}}.html %}
+      </a>
+    {% endfor %}
+    </div>
+  </nav>
+</footer>

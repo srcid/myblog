@@ -1,0 +1,17 @@
+<a href="{{post.url}}" class="card bg-base-200 p-4 shadow-md hover:shadow-lg hover:scale-105 hover:cursor-pointer transition">
+    <div class="card-body">
+        <h2 class="card-title">{{ post.title}}</h2>
+        <ul class="card-actions justify-between">
+            <li class="badge badge-primary badge-lg">
+                <time datetime="{{ page.date }}">
+                    {{ page.date | date: "%d/%m/%Y" }}
+                </time>
+            </li>
+            <ul>
+                {% for category in post.categories %}
+                    <li class="badge badge-outline badge-lg">{{category}}</li>
+                {% endfor %}
+            </ul>
+        </ul>
+    </div>
+</a>

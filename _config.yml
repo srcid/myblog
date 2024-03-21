@@ -1,0 +1,34 @@
+url: "blog.alcides.dev.br"
+baseurl: ""
+title: "Blog do Alcides"
+description: >-
+  Bem-vindo ao meu blog pessoal, sou Alcides. Aqui falo de programação e tecnologia, principalmente para mim mesmo.
+  Sinta-se à vontade para mandar complementos e sugestões através de issues no repositório desse site no meu github.
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+# Set html page language to brazilian portuguese.
+lang: "pt-BR"
+
+# Set the default path to be only the title of the post.
+permalink: /:title
+
+collections:
+  routes:
+    output: true
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+
+exclude:
+  - package-lock.json
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
