@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<article class="mx-auto max-w-3xl [&_h1]:text-5xl [&_h2]:text-4xl [&_h3]:text-3xl [&_h4]:text-2xl [&_h5]:text-xl [&_h6]:text-lg">
+<article class="prose mx-auto">
     <header class="mb-4">
         <h1 class="mb-2">{{ page.title }}</h1>
         <time class="text-slate-600" datetime="{{ page.date }}">
             {{ page.date | date: "%d/%m/%Y" }}
         </time>
     </header>
-    <div class="[&>p]:mb-2 [&>h2]:my-4 [&>.highlight]:my-2 [&>blockquote]:bg-base-300 [&>blockquote]:py-2 [&>blockquote]:pl-3 [&>blockquote]:mb-4 [&>blockquote]:rounded-lg [&>blockquote]:border-l-8 [&>blockquote]:border-slate-600 [&>blockquote]:text-base [&_a]:link [&_a]:link-primary">
+    <div class="[&>blockquote]:bg-base-300 [&>blockquote]:rounded-r-md [&_a]:link-primary">
         {{ content }}
     </div>
 </article>
