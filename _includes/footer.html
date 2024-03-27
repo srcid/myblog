@@ -16,10 +16,10 @@
     <h6 class="footer-title">Social</h6>
     <div class="grid grid-flow-col gap-4">
       {% for account in site.data.social.accounts %}
-      <a class="link link-hover [&>svg]:size-6 [&>svg]:fill-current" href="{{ site.data.social.urls[account.platform] | append: account.id }}" target="_blank" rel="noopener noreferrer">
-        {% include icons/social/{{account.platform}}.html %}
-      </a>
-    {% endfor %}
+        <a class="link link-hover [&>svg]:size-6 [&>svg]:fill-current" href="{{ site.data.social.urls[account.platform] | append: account.id }}" target="_blank" rel="noopener noreferrer">
+          {% include icons/social/{{account.platform}}.html %}
+        </a>
+      {% endfor %}
     </div>
   </nav>
 </footer>
