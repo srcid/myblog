@@ -20,6 +20,7 @@ permalink: /:title
 collections:
   routes:
     output: true
+  papers:
 
 defaults:
   - scope:

@@ -1,0 +1,8 @@
+<div>
+    <h2>{{ forloop.index | append: ". " | append: paper.title }}</h2>
+    <time class="text-slate-600" datetime="{{ page.date }}">
+        {{ paper.date | date: "%d/%m/%Y" }}
+    </time>
+    <p>{{ paper.content | markdownify }}</p>
+    <a class="not-prose btn btn-link float-right" href="{{paper.link}}" target="_blank" rel="noopener noreferrer">acessar</a>
+</div>
