@@ -1,24 +1,22 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './_drafts/**/*.html',
-    './_includes/**/*.html',
-    './_layouts/**/*.html',
-    './_posts/*.md',
-    './_pages/*.md',
-    './_routes/*.md',
-    './*.md',
-    './*.html',
+    "./_drafts/**/*.html",
+    "./_includes/**/*.html",
+    "./_layouts/**/*.html",
+    "./_posts/*.md",
+    "./*.md",
+    "./*.html",
   ],
   theme: {
-    theme: {
-      extend: {},
-    },
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/typography'),
-    require("daisyui"),
+    require("daisyui")
   ],
   daisyui: {
-    logs: false,
-  },
+    logs: false
+  }
 }
+

@@ -11,6 +11,9 @@ plugins:
 postcss:
   cache: false
 
+sass:
+    style: compressed
+
 # Set html page language to brazilian portuguese.
 lang: "pt-BR"
 
