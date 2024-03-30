@@ -7,7 +7,7 @@
                     {{ post.date | date: "%d/%m/%Y" }}
                 </time>
             </li>
-            <ul>
+            <ul class="flex gap-2 flex-wrap">
                 {% for category in post.categories %}
                     <li class="badge badge-outline badge-lg">{{category}}</li>
                 {% endfor %}
