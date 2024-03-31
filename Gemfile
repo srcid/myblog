@@ -1,5 +1,5 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.3.2"
-gem "webrick"
-gem "jekyll-postcss"
+gem 'jekyll'
+gem 'webrick'
+gem 'jekyll-postcss'
