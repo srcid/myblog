@@ -48,4 +48,4 @@ oter links
 
 Depois, acesse `https://1.1.1.1/help` e você deverá ver a resposta abaixo.
 
-![Cloudflare DoT check](/assets/images/posts/1.1.1.1_help.png)
+![Cloudflare DoT check]({{ "/assets/images/posts/1.1.1.1_help.png" | relative_path}})
