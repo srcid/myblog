@@ -9,7 +9,7 @@ Atualmente, systemd-resolved gerencia as configurações de DNS na maioria das d
 
 Crie um arquivo em `/etc/systemd/resolve.conf.d/99-dot.conf` com o seguinte conteúdo. Isso irá criar uma configuração global para o systemd-resolved com DoT e DNSSEC habilitados. Você pode remover a opção de DNSSEC, caso queira.
 
-{% highlight toml %}
+{% highlight plaintext %}
 [Resolve]
 DNS=1.1.1.1#cloudflare-dns.com 1.0.0.1#cloudflare-dns.com 
 DNSSEC=yes
@@ -21,7 +21,7 @@ Domains=~.
 
 Para evitar que o NetworkManager configure endereços de DNS, crie o arquivo `/etc/NetworkManager/conf.d/dns.conf` com o seguinte conteúdo.
 
-{% highlight toml %}
+{% highlight plaintext %}
 [main]
 dns=none
 systemd-resolved=false
